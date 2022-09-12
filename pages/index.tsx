@@ -37,9 +37,11 @@ const Home = () => {
 
   const [isConnected, setIsConnected] = useState(false)
   const [isSSR, setIsSSR] = useState(true);
+  const [isMM, setIsMM] = useState(false)
 
   useEffect(() => {
     setIsSSR(false);
+    if (window.ethereum) setIsMM(true)
   }, []);
 
   const [blocks, setBlocks] = useState<Array<[number, Array<string>, Array<React.CSSProperties>]>>(() => {
@@ -74,7 +76,7 @@ const Home = () => {
     "blocks": blocks, "onBlockModify": setBlocks
   }
 
-  return (
+  if (isMM)return (
     <>
     <Head>
       <style>
@@ -104,6 +106,11 @@ const Home = () => {
     </div>
     </div>
     </>
+  )
+  return (
+    <div className="w-full h-full flex justify-center align-middle text-4xl">
+      <h1 className="">INSTALL METAMASK</h1>
+    </div>
     
   )
 }
