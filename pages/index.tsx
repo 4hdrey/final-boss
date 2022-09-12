@@ -76,7 +76,7 @@ const Home = () => {
     "blocks": blocks, "onBlockModify": setBlocks
   }
 
-  if (isMM)return (
+  return (
     <>
     <Head>
       <style>
@@ -86,7 +86,7 @@ const Home = () => {
     <div className="flex align-center bg-main text-text h-60 flex-col mb-10">
       <div className="text-2xl p-2.5 flex justify-between w-full">
         <h1>Stretchit</h1>
-        <Context.Provider value={[isConnected,setIsConnected]}> <ConnectButton/> </Context.Provider>
+        <Context.Provider value={[isConnected,setIsConnected]}> {isMM && <ConnectButton/>} </Context.Provider>
     </div>
         <h2 className="text-xl text-center my-6">The application for noting and planning via adjustable flexible tiles</h2>
         <h2 className="text-2xl text-center my-6">Create new block with some tiles using buttons below</h2>
@@ -107,12 +107,5 @@ const Home = () => {
     </div>
     </>
   )
-  return (
-    <div className="w-full h-full flex justify-center align-middle text-4xl">
-      <h1 className="">INSTALL METAMASK</h1>
-    </div>
-    
-  )
 }
-
 export default Home

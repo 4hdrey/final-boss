@@ -31,6 +31,5 @@ export default function ConnectButton() {
         <>
             {(isConnected) ? <h3>{`${address}`}</h3> : <button onClick={connectToMetamask}>Connect metamask</button>}
         </>
-        
     )
 }
