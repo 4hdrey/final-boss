@@ -31,7 +31,6 @@ export default function useResize(refLeft: React.RefObject<Element> | React.RefO
           return block
         })
         onBlockModify(newSize)
-        console.log("a")
       }, [style, onBlockModify]) 
 
     useEffect(() => {
