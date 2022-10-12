@@ -38,6 +38,8 @@ const Home = () => {
     Array<[number, Array<string>, Array<React.CSSProperties>]>
   >([]);
 
+  console.log(process.env.NEXT_PUBLIC_MAIN_CONTRACT_ADDRESS);
+
   useEffect(() => {
     if (isConnected)
       (async () => {
