@@ -7,9 +7,8 @@ export default function useBlockManage(props: blockProps<[number, string[], Reac
             if (index > blockId) return [block[0] - 1, block[1], block[2]]
             return block
             })
-        var newBlocks = mapped
-        newBlocks.splice(blockId, 1)
-        onBlockModify(newBlocks)
+        mapped.splice(blockId, 1)
+        onBlockModify(mapped)
     }
 
     function textEdit(e: React.ChangeEvent<HTMLTextAreaElement>, number: number = 1) {
