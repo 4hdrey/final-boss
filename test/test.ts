@@ -59,13 +59,11 @@ describe("Stretchit", function () {
       "you already have an account!"
     );
 
-    await expect(
-      stretchit.connect(addr1).allow({ value: ethers.utils.parseEther("2") })
-    ).to.be.revertedWith("wrong amount");
+    await expect(stretchit.connect(addr1).allow()).to.be.reverted;
 
     await stretchit
       .connect(addr1)
-      .allow({ value: ethers.utils.parseEther("1") });
+      .allow({ value: ethers.utils.parseEther("0.01") });
 
     await expect(
       stretchit.connect(addr1).allow({ value: ethers.utils.parseEther("0.01") })
