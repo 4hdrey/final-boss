@@ -9,7 +9,7 @@ The application for taking notes in a creative way. Stretch and customize note b
 Clone the project
 
 ```bash
-  git clone https://github.com/andrei-samokish/final-boss
+  git clone https://github.com/andrei-samokish/final-boss.git
 ```
 
 Go to the project directory
@@ -49,7 +49,7 @@ To run this project, you will need to add the following environment variables to
 
 ## Tech Stack
 
-**Client:** React, Next, TailwindCSS, Solidity, Hardhat (deploy + tests), Ethers.js
+**Client:** TypeScript, React, Next, TailwindCSS, Solidity, Hardhat (deploy + tests), Ethers.js
 
 **Server:** Node, Vercel
 
