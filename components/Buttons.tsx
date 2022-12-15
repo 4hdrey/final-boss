@@ -17,12 +17,10 @@ export default function Buttons(props: ButtonsProps) {
 
   useEffect(() => {
     (async () => {
-      let _allowance: boolean;
       try {
-        if (await isSignedUp(isConnected)) {
-          _allowance = await (await userContrWithSigner()).allowance();
-          setAllowance(_allowance);
-        }
+        const _allowance = await (await userContrWithSigner()).allowance();
+        console.log(_allowance);
+        setAllowance(_allowance);
       } catch (error) {
         console.error(error);
       }
@@ -44,11 +42,7 @@ export default function Buttons(props: ButtonsProps) {
 
     if (isConnected) {
       (await userContrWithSigner()).once("Pushed", (contrAddress) => {
-        console.log(
-          "sucessfully pushed data of",
-          contrAddress,
-          "user`s address"
-        );
+        console.log("sucessfully pushed data of", contrAddress, "user`s address");
       });
 
       await (await userContrWithSigner()).pushData(newData);
