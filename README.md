@@ -49,7 +49,7 @@ To run this project, you will need to add the following environment variables to
 
 ## Tech Stack
 
-**Client:** React, Next, TailwindCSS, Solidity, Hardhat (deploy + tests)
+**Client:** React, Next, TailwindCSS, Solidity, Hardhat (deploy + tests), Ethers.js
 
 **Server:** Node, Vercel
 
